@@ -1,18 +1,201 @@
+@font-face {
+  font-family: 'BridgetLily';
+  src: url('../media/BridgetLily.otf') format('opentype');
+}
+
+
 /* ---------- Base Styles ---------- */
 body {
-  background-color: #FFFDF8;  /* Soft cream */
-  color: #2D2D2D;             /* Rich charcoal */
-  font-family: 'Segoe UI', sans-serif;
+  font-family: 'Inter', sans-serif;
   margin: 0;
-  padding: 0;
-  line-height: 1.6;
+  color: #2D2D2D;             /* Dark charcoal for text */
+  opacity: .8;
+  z-index: -1;
+  background-color: rgb(241, 17, 103);
+  background: linear-gradient(to right, #f5af19, 60%,rgb(241, 17, 103)); 
 }
+
+/* ---------- Header Section ---------- */
+header {
+  padding: 1rem 2rem;
+  color: #FFFFFF;
+  max-width: 85%;
+  margin: 0 auto;
+}
+
+nav {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  font-size: 1.5rem;
+}
+
+nav h1 {
+  font-family: 'BridgetLily', sans-serif;
+  color: white;
+  font-size: 2rem;
+  letter-spacing: 0.05em;
+}
+
+nav ul {
+  list-style: none;
+  display: flex;
+  gap: 1rem;
+}
+
+nav a {
+  color: #FFFFFF; 
+  text-decoration: none;
+}
+
+/* ---------- Hero Section ---------- */
+.hero {
+  padding: 2rem 2rem;
+  text-align: center;
+  background: #FFFAF0; 
+}
+
+.hero h2 {
+  font-family: 'Poppins', sans-serif;
+  font-size: 2rem;
+}
+
+.ml11 {
+  position: relative;
+  font-weight: 700;
+  font-size: 2rem;
+  color: #ECA400;
+  font-family: 'Poppins', sans-serif;
+}
+
+.ml11 .text-wrapper {
+  position: relative;
+  display: inline-block;
+  padding-right: 0.1em;
+  padding-left: 0.1em;
+}
+
+.ml11 .line {
+  position: absolute;
+  left: 0;
+  top: 0;
+  height: 100%;
+  width: 3px;
+  background-color: #ECA400; /* Cozy yellow line */
+  transform-origin: 0 0;
+}
+
+.ml11 .letter {
+  display: inline-block;
+  line-height: 1em;
+}
+
+
 
 /* ---------- Section Styles ---------- */
 section {
-  padding: 4rem 2rem;
+  padding: 2rem;
+  max-width: 1200px;
+  margin: auto 4rem;
 }
 
+footer {
+  text-align: center;
+  padding: 2rem;
+  background:rgba(71, 71, 71, 0.4);
+  color: white;
+}
+
+#wrapper {
+  background-color: #FFFAF0;
+  max-width: 85%;
+  margin: 0 auto;
+}
+
+/* ---------- About Section ---------- */
+#about {
+  background-color: #FFFAF0;  /* Very light cream/off-white */
+  padding: 2rem 2rem;
+  
+}
+
+#about h2, #projects h2, #contact h2, #skills h2 {
+  font-size: 2rem;
+  margin-bottom: 1rem;
+  color: #ECA400;
+}
+
+#about p, #projects p, #contact p, #skills p {
+  font-size: 1.1rem;
+  color: #2d2d2d;
+  line-height: 1.6;
+  margin-bottom: 1rem;
+}
+
+#skills {
+  background-color: #FFFAF0;
+  padding: 4rem 2rem;
+  text-align: center;
+}
+
+.skills-container {
+  max-width: 1000px;
+  margin: auto;
+}
+
+#skills h2 {
+  font-size: 2.5rem;
+  margin-bottom: 2rem;
+  color: #2D2D2D;
+}
+
+.skill-category {
+  margin-bottom: 3rem;
+}
+
+.skill-category h3 {
+  color: #ECA400;
+  margin-bottom: 1rem;
+  font-size: 1.6rem;
+}
+
+.icons-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(100px, 1fr));
+  gap: 1.5rem;
+  justify-items: center;
+  align-items: center;
+}
+
+.skill-icon {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+.skill-icon img {
+  width: 48px;
+  height: 48px;
+  margin-bottom: 0.5rem;
+}
+
+.skill-icon span {
+  font-size: 0.95rem;
+  color: #2D2D2D;
+}
+
+.soft-skills {
+  list-style: none;
+  padding: 0;
+  font-size: 1.05rem;
+  color: #555;
+  display: grid;
+  gap: 0.5rem;
+  grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
+}
+
+
+/* ---------- Heading and Text Color for All Sections ---------- */
 h1, h2, h3 {
   color: #ECA400;             /* Cozy golden yellow */
   margin-bottom: 1rem;
@@ -21,17 +204,6 @@ h1, h2, h3 {
 p {
   margin-bottom: 1rem;
   font-size: 1.1rem;
-}
-
-/* ---------- About Section ---------- */
-#about {
-  background-color: #FFFAF0;  /* Very subtle background tint */
-  text-align: center;
-}
-
-.about-container {
-  max-width: 700px;
-  margin: 0 auto;
 }
 
 /* ---------- Buttons ---------- */
@@ -53,10 +225,58 @@ button:hover, .btn:hover {
 
 /* ---------- Link Styling ---------- */
 a {
-  color: #ECA400;             /* Accent yellow */
+  color: #ECA400;  /* Cozy yellow */
   text-decoration: none;
 }
 
 a:hover {
-  color: #F4A261;             /* Soft orange hover */
+  color: #F4A261;  /* Soft orange */
+}
+
+/* ---------- Mobile Responsiveness ---------- */
+@media (max-width: 768px) {
+  body {
+    padding: 1rem;
+  }
+
+  section {
+    padding: 2rem 1rem;
+  }
+
+  .about-container {
+    padding: 1rem;
+  }
+
+  header {
+    padding: 1rem;
+  }
+
+  nav h1 {
+    font-size: 1.6rem;
+  }
+
+  .hero h2 {
+    font-size: 1.6rem;
+  }
+
+  h2 {
+    font-size: 1.5rem;
+  }
+
+  p {
+    font-size: 1rem;
+  }
+
+  button, .btn {
+    padding: 0.75rem 1.2rem;
+  }
+
+  nav ul {
+    display: block;
+    text-align: center;
+  }
+
+  nav a {
+    padding: 0.5rem;
+  }
 }
