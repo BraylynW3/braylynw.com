@@ -1,84 +1,62 @@
+/* ---------- Base Styles ---------- */
 body {
-    font-family: 'Inter', sans-serif;
-    margin: 0;
-    background: #F7F7F7;
-    color: #2D2D2D;
-  }
-  
-  header {
-    background: #BFA2DB;
-    padding: 1rem 2rem;
-  }
-  
-  nav {
-    display: flex;
-    justify-content: space-between;
-    align-items: center;
-  }
-  
-  nav h1 {
-    font-family: 'Poppins', sans-serif;
-    color: white;
-    font-size: 1.8rem;
-  }
-  
-  nav ul {
-    list-style: none;
-    display: flex;
-    gap: 1rem;
-  }
-  
-  nav a {
-    color: white;
-    text-decoration: none;
-  }
-  
-  .hero {
-    padding: 4rem 2rem;
-    text-align: center;
-    background: #AEE1CD;
-  }
-  
-  .hero h2 {
-    font-family: 'Poppins', sans-serif;
-    font-size: 2rem;
-  }
-  
-  section {
-    padding: 2rem;
-    max-width: 800px;
-    margin: auto;
-  }
-  
-  footer {
-    text-align: center;
-    padding: 2rem;
-    background: #BFA2DB;
-    color: white;
-  }
-  
-  #about {
-    background-color: #f9f9f9;
-    padding: 4rem 2rem;
-    text-align: center;
-    font-family: 'Segoe UI', sans-serif;
-  }
-  
-  .about-container {
-    max-width: 700px;
-    margin: 0 auto;
-  }
-  
-  #about h2 {
-    font-size: 2rem;
-    margin-bottom: 1rem;
-    color: #333;
-  }
-  
-  #about p {
-    font-size: 1.1rem;
-    color: #555;
-    line-height: 1.6;
-    margin-bottom: 1rem;
-  }
-  
+  background-color: #FFFDF8;  /* Soft cream */
+  color: #2D2D2D;             /* Rich charcoal */
+  font-family: 'Segoe UI', sans-serif;
+  margin: 0;
+  padding: 0;
+  line-height: 1.6;
+}
+
+/* ---------- Section Styles ---------- */
+section {
+  padding: 4rem 2rem;
+}
+
+h1, h2, h3 {
+  color: #ECA400;             /* Cozy golden yellow */
+  margin-bottom: 1rem;
+}
+
+p {
+  margin-bottom: 1rem;
+  font-size: 1.1rem;
+}
+
+/* ---------- About Section ---------- */
+#about {
+  background-color: #FFFAF0;  /* Very subtle background tint */
+  text-align: center;
+}
+
+.about-container {
+  max-width: 700px;
+  margin: 0 auto;
+}
+
+/* ---------- Buttons ---------- */
+button, .btn {
+  background-color: #3C3C3C;  /* Deep gray */
+  color: white;
+  padding: 0.75rem 1.5rem;
+  border: none;
+  border-radius: 6px;
+  cursor: pointer;
+  transition: background-color 0.3s ease;
+  font-size: 1rem;
+}
+
+button:hover, .btn:hover {
+  background-color: #FFDD57;  /* Buttery yellow */
+  color: #2D2D2D;
+}
+
+/* ---------- Link Styling ---------- */
+a {
+  color: #ECA400;             /* Accent yellow */
+  text-decoration: none;
+}
+
+a:hover {
+  color: #F4A261;             /* Soft orange hover */
+}
