@@ -28,8 +28,10 @@
   <body>
     <header>
       <nav>
-        <h1>Braylyn Williams</h1>
-        <ul>
+        <div class="title">
+          <h1>Braylyn Williams</h1>
+        </div>
+        <ul class="nav-links">
           <li><a href="#about">About</a></li>
           <li><a href="#skills">Skills</a></li>
           <li><a href="#education">Education</a></li>
@@ -48,7 +50,7 @@
           </span>
         </h2>
         <p>21-year-old Aspiring Software Developer</p>
-        <img src="media/bwhero.jpg" alt="Braylyn Williams" />
+        <img src="media/bwhero.jpg" alt="Braylyn Williams" id="Braylyn-image" />
       </section>
 
       <section id="about">
@@ -77,81 +79,139 @@
       <section id="skills">
         <div class="skills-container">
           <h2>Skills</h2>
-      
-          <!-- Technical Skills -->
           <div class="skill-category">
-            <h3>Technical Skills</h3>
             <div class="icons-grid">
-      
-              <!-- Each tech stack icon -->
               <div class="skill-icon">
-                <img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/access/access-original.svg" alt="Access" />
+                <img
+                  src="https://res-1.cdn.office.net/files/fabric-cdn-prod_20230815.002/assets/brand-icons/product/svg/access_48x1.svg"
+                  alt="Access"
+                />
                 <span>Access</span>
               </div>
               <div class="skill-icon">
-                <img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/csharp/csharp-original.svg" alt="C#" />
+                <img src="media/arcgis-logo.png" alt="ArcGIS" />
+                <span>ArcGIS</span>
+              </div>
+              <div class="skill-icon">
+                <img
+                  src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/csharp/csharp-original.svg"
+                  alt="C#"
+                />
                 <span>C#</span>
               </div>
               <div class="skill-icon">
-                <img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/css3/css3-original.svg" alt="CSS" />
+                <img
+                  src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/css3/css3-original.svg"
+                  alt="CSS"
+                />
                 <span>CSS</span>
               </div>
               <div class="skill-icon">
-                <img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/expo/expo-original.svg" alt="Expo" />
-                <span>Expo</span>
+                <img
+                  src="https://res-1.cdn.office.net/files/fabric-cdn-prod_20230815.002/assets/brand-icons/product/svg/excel_48x1.svg"
+                  alt="Excel"
+                />
+                <span>Excel</span>
               </div>
               <div class="skill-icon">
-                <img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/html5/html5-original.svg" alt="HTML" />
+                <img
+                  src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/github/github-original.svg"
+                  alt="GitHub"
+                />
+                <span>GitHub</span>
+              </div>
+              <div class="skill-icon">
+                <img
+                  src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/html5/html5-original.svg"
+                  alt="HTML"
+                />
                 <span>HTML</span>
               </div>
               <div class="skill-icon">
-                <img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/javascript/javascript-original.svg" alt="JavaScript" />
+                <img
+                  src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/javascript/javascript-original.svg"
+                  alt="JavaScript"
+                />
                 <span>JavaScript</span>
               </div>
               <div class="skill-icon">
-                <img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/linux/linux-original.svg" alt="Linux" />
+                <img
+                  src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/linux/linux-original.svg"
+                  alt="Linux"
+                />
                 <span>Linux</span>
               </div>
               <div class="skill-icon">
-                <img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/mysql/mysql-original.svg" alt="MySQL" />
+                <img
+                  src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/mysql/mysql-original.svg"
+                  alt="MySQL"
+                />
                 <span>MySQL</span>
               </div>
               <div class="skill-icon">
-                <img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/nodejs/nodejs-original.svg" alt="Node.js" />
+                <img
+                  src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/nodejs/nodejs-original.svg"
+                  alt="Node.js"
+                />
                 <span>Node.js</span>
               </div>
               <div class="skill-icon">
-                <img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/python/python-original.svg" alt="Python" />
+                <img
+                  src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/python/python-original.svg"
+                  alt="Python"
+                />
                 <span>Python</span>
               </div>
               <div class="skill-icon">
-                <img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/react/react-original.svg" alt="React.js" />
+                <img
+                  src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/react/react-original.svg"
+                  alt="React.js"
+                />
                 <span>React.js</span>
               </div>
               <div class="skill-icon">
-                <img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/typescript/typescript-original.svg" alt="TypeScript" />
+                <img
+                  src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/typescript/typescript-original.svg"
+                  alt="TypeScript"
+                />
                 <span>TypeScript</span>
               </div>
-              <!-- You can add Microsoft Word/Excel/AD logos manually if desired -->
+              <div class="skill-icon">
+                <img
+                  src="https://res-1.cdn.office.net/files/fabric-cdn-prod_20230815.002/assets/brand-icons/product/svg/word_48x1.svg"
+                  alt="Word"
+                />
+                <span>Word</span>
+              </div>
             </div>
-          </div>
-      
-          <!-- Soft Skills -->
-          <div class="skill-category">
-            <h3>Soft Skills</h3>
-            <ul class="soft-skills">
-              <li>Active Directory User Management</li>
-              <li>Basic Team Management</li>
-              <li>Customer Service</li>
-              <li>Database Design & Management</li>
-              <li>Detail Oriented</li>
-              <li>Quick Learner</li>
-              <li>Strong Verbal & Written Communication</li>
-            </ul>
           </div>
         </div>
       </section>
-      
+
+      <section id="education">
+        <h2>Education</h2>
+        <div class="education-container">
+          <div class="education-item">
+            <img src="media/wgu-logo.png" alt="Western Governors University" />
+            <h3>Western Governors University</h3>
+            <p>
+              Accelerated Software Engineering Bachelor’s and Master’s Degree
+            </p>
+            <p>Anticipated Graduation in 2027</p>
+          </div>
+          <div class="education-item">
+            <img
+              src="media/hgtc-logo.png"
+              alt="Horry-Georgetown Technical College"
+            />
+            <h3>Horry-Georgetown Technical College</h3>
+            <p>
+              Associates of Applied Science - Computer Technology, Programming
+            </p>
+            <p>Graduating May 2025</p>
+          </div>
+        </div>
+      </section>
 
       <section id="projects">
         <div class="projects-container">
@@ -211,11 +271,12 @@
       </section>
 
       <section id="contact">
-        <h3>Contact</h3>
+        <h2>Contact</h2>
         <p>
           Email me at
           <a href="mailto:braylyn.w3@gmail.com">braylyn.w3@gmail.com</a> or find
-          me on <a href="https://www.linkedin.com">LinkedIn</a>.
+          me on
+          <a href="https://www.linkedin.com/in/braylyn-williams3/">LinkedIn</a>.
         </p>
       </section>
     </div>

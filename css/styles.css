@@ -1,3 +1,7 @@
+* {
+  box-sizing: border-box;
+}
+
 @font-face {
   font-family: 'BridgetLily';
   src: url('../media/BridgetLily.otf') format('opentype');
@@ -8,11 +12,18 @@
 body {
   font-family: 'Inter', sans-serif;
   margin: 0;
-  color: #2D2D2D;             /* Dark charcoal for text */
+  color: #2D2D2D;             
   opacity: .8;
   z-index: -1;
   background-color: rgb(241, 17, 103);
   background: linear-gradient(to right, #f5af19, 60%,rgb(241, 17, 103)); 
+}
+
+/* General responsive styles */
+body {
+  margin: 0;
+  padding: 0;
+  font-family: 'Inter', sans-serif;
 }
 
 /* ---------- Header Section ---------- */
@@ -30,6 +41,14 @@ nav {
   font-size: 1.5rem;
 }
 
+header nav {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-between;
+  align-items: center;
+  padding: 10px 20px;
+}
+
 nav h1 {
   font-family: 'BridgetLily', sans-serif;
   color: white;
@@ -43,9 +62,23 @@ nav ul {
   gap: 1rem;
 }
 
+.nav-links {
+  display: flex;
+  gap: 15px;
+}
+
+.nav-links li {
+  list-style: none;
+}
+
 nav a {
   color: #FFFFFF; 
   text-decoration: none;
+}
+
+.nav-links a {
+  text-decoration: none;
+  color: inherit;
 }
 
 /* ---------- Hero Section ---------- */
@@ -94,7 +127,7 @@ nav a {
 
 /* ---------- Section Styles ---------- */
 section {
-  padding: 2rem;
+  padding: 40px 20px; /* Reduced padding */
   max-width: 1200px;
   margin: auto 4rem;
 }
@@ -119,13 +152,14 @@ footer {
   
 }
 
-#about h2, #projects h2, #contact h2, #skills h2 {
+#about h2, #projects h2, #contact h2, #skills h2, #education h2{
   font-size: 2rem;
   margin-bottom: 1rem;
   color: #ECA400;
+  text-align: center;
 }
 
-#about p, #projects p, #contact p, #skills p {
+#about p, #projects p, #contact p, #skills p, #education p {
   font-size: 1.1rem;
   color: #2d2d2d;
   line-height: 1.6;
@@ -134,29 +168,12 @@ footer {
 
 #skills {
   background-color: #FFFAF0;
-  padding: 4rem 2rem;
-  text-align: center;
+  padding: 1rem 2rem;
 }
 
 .skills-container {
   max-width: 1000px;
   margin: auto;
-}
-
-#skills h2 {
-  font-size: 2.5rem;
-  margin-bottom: 2rem;
-  color: #2D2D2D;
-}
-
-.skill-category {
-  margin-bottom: 3rem;
-}
-
-.skill-category h3 {
-  color: #ECA400;
-  margin-bottom: 1rem;
-  font-size: 1.6rem;
 }
 
 .icons-grid {
@@ -184,20 +201,32 @@ footer {
   color: #2D2D2D;
 }
 
-.soft-skills {
-  list-style: none;
-  padding: 0;
-  font-size: 1.05rem;
-  color: #555;
-  display: grid;
-  gap: 0.5rem;
-  grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
+#education {
+  padding: 1rem 2rem;
+  background-color: #FFFAF0;
 }
 
+.education-container {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 20px;
+  justify-content: center;
+}
+
+.education-item {
+  text-align: center;
+  max-width: 400px;
+}
+
+.education-item img {
+  width: auto;
+  height: 130px;
+  margin-bottom: 10px;
+}
 
 /* ---------- Heading and Text Color for All Sections ---------- */
 h1, h2, h3 {
-  color: #ECA400;             /* Cozy golden yellow */
+  color: #ECA400;        
   margin-bottom: 1rem;
 }
 
@@ -230,53 +259,112 @@ a {
 }
 
 a:hover {
-  color: #F4A261;  /* Soft orange */
+  text-decoration: underline;
+  color: #FFDD57; 
 }
+
 
 /* ---------- Mobile Responsiveness ---------- */
 @media (max-width: 768px) {
   body {
-    padding: 1rem;
+    padding: 0.5rem; 
   }
 
   section {
-    padding: 2rem 1rem;
-  }
-
-  .about-container {
-    padding: 1rem;
+    padding: 1rem; 
+    max-width: 95%; 
+    margin: 0 auto; 
   }
 
   header {
-    padding: 1rem;
+    padding: 1rem 0; 
+    text-align: center; 
+  }
+
+  nav {
+    flex-direction: column; 
+    align-items: center;
   }
 
   nav h1 {
-    font-size: 1.6rem;
-  }
-
-  .hero h2 {
-    font-size: 1.6rem;
-  }
-
-  h2 {
-    font-size: 1.5rem;
-  }
-
-  p {
-    font-size: 1rem;
-  }
-
-  button, .btn {
-    padding: 0.75rem 1.2rem;
+    font-size: 2.5rem; 
+    margin-bottom: 1rem; 
   }
 
   nav ul {
-    display: block;
-    text-align: center;
+    display: flex;
+    flex-direction: column; 
+    gap: 0.5rem;
   }
 
   nav a {
     padding: 0.5rem;
+    font-size: 1.2rem; 
+  }
+
+  #Braylyn-image {
+    width: 100%;
+    max-width: 400px; 
+    height: auto;
+    margin: 1rem auto; 
+  }
+
+  #about h2 {
+    font-size: 2rem; 
+    white-space: nowrap; 
+  }
+
+  .nav-links {
+    flex-direction: column;
+    align-items: center;
+    gap: 10px;
+  }
+
+  .hero {
+    text-align: center;
+    padding: 20px;
+  }
+
+  .hero img {
+    width: 100%;
+    max-width: 300px;
+    height: auto;
+    margin: 10px 0;
+  }
+
+  .skills-container .icons-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(100px, 1fr));
+    gap: 15px;
+    justify-items: center;
+  }
+
+  .education-container {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 20px;
+  }
+
+  .education-item img {
+    width: 80px;
+    height: auto;
+  }
+
+  .projects-container {
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
+  }
+
+  .project-card {
+    padding: 15px;
+    border: 1px solid #ddd;
+    border-radius: 8px;
+  }
+
+  footer {
+    text-align: center;
+    padding: 10px;
   }
 }
